@@ -1,0 +1,10 @@
+<p><label>お名前 <span class="req">※必須</span><br />
+    [text* your-name] </label></p>
+
+<p><label>メールアドレス <span class="req">※必須</span><br />
+    [email* your-email] </label></p>
+
+<p><label>お問い合わせ内容<br />
+    [textarea your-message] </label></p>
+
+<p class="submit">[submit "送信"]</p>

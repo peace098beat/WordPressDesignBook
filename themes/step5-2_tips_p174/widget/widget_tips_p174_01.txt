@@ -1,0 +1,17 @@
+<ul>
+<?php $myquery_status = array(
+	'tax_query' => array(array(
+		'taxonomy' => 'post_format',
+		'field' => 'slug',
+		'terms' => array('post-format-status','post-format-aside')
+	))
+); ?>
+<?php query_posts($myquery_status); ?>
+<?php if(have_posts()): while(have_posts()): 
+the_post(); ?>
+	<li>
+	<?php echo get_the_content(); ?> <span><?php echo get_the_date('nŒŽj“ú h:i A'); ?></span>
+	</li>
+<?php endwhile; endif; ?>
+</ul>
+<?php wp_reset_query(); ?>

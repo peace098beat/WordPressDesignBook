@@ -17,4 +17,20 @@ define('HEADER_IMAGE_HEIGHT', 228);
 //ウィジェットの設定
 register_sidebar();
 
+//wordpressのバージョン情報の出力を停止
+remove_action('wp_head' ,'wp_generator' );
+
+//RSSフィードの情報を出力
+// wp_head();を通してRSSフィードが表示される。
+add_theme_support('automatic-feed-links' );
+
+//jQueryの設定を出力
+add_action('wp_head','myScript', 1);
+function myScript(){
+	wp_enqueue_script('jquery' );
+}
+
+//エディタ・スタイルシート
+add_editor_style( );
+
 ?>

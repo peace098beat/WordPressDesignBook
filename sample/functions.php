@@ -57,4 +57,10 @@ function my_excerpt_mblength($length) {
 	return 10;
 }
 add_filter('excerpt_mblength' ,'my_excerpt_mblength' );
+
+//カテゴリーページのサムネイル画像のサイズ指定用関数
+add_image_size('mysize400', 100, 100 );
+
+
+
 ?>

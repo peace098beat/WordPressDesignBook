@@ -190,7 +190,22 @@ Version: WordPress 3.8
 		
 - 22:06
 
-## 4-3 記事ごとにサムネイル画像を表示する
+## 4-3 記事ごとにサムネイル画像を表示する 22:08 - 23:00
+ - content-excerpt.php  
+	 - 概要
+	 - 関数
+		 - has_post_thumbnail
+
+			サムネイル画像の有無の確認
+
+		 - the_post_thumbnail
+	
+			サムネイル画像の表示
+	
+		 - bloginfo('template_url')
+		
+			テンプレートファイルのパスを取得
+
 
 ## 4-4 表示する記事の数をテンプレート内で指定する
 

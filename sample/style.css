@@ -160,6 +160,13 @@ div.post p.postinfo{
 	text-align: center;
 	padding-top: 5px;
 }
+/* 記事の個別ページ */
+.single div.post h2	{background-color:#333333;
+	color: white}
+
+.single div.post h2 a	{color: white}
+
+
 
 /*サイドバー*/
 div#sidebar{
@@ -208,4 +215,74 @@ div#footer p{
 	font-style: normal;
 	font-family: Verdana, sans-serif;
 	margin: 0;
+}
+
+/* ギャラリー */
+.gallery-item{
+	width: 33%;
+	float: left;
+	margin-top: 0;
+	text-align: center;
+ } 
+ .gallery img{
+ 	border: #aaa 1px solid;
+ 	padding: 5px;
+}
+.gallery a:hover img{
+	background-color: #c4f254;
+}
+.gallery dd{
+	margin: 0;
+	font-size: 0.75em;
+}
+.gallery br+br{
+	display: none;
+}
+
+/* 天気と気温 */
+p.tenki	{width: 50px;
+	float: left;
+	text-align: center;
+	border: solid 1px #f3b62f;
+	padding: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px}
+
+/* 関連記事 */
+div.related	{border: solid 1px #aaaaaa;
+	margin-top: 20px}
+
+div.related p	{color: #ffffff;
+	background-color: #a7d043;
+	margin: 0;
+	padding-left: 10px}
+
+div.related ol	{font-size: 0.75em}
+
+
+/* 分割した記事へのリンク */
+#postpage	{text-align: center;
+	padding-top: 20px;
+	clear: both}
+
+#postpage a	{border: solid 1px #aaaaaa;
+	padding: 5px 10px;
+	margin: 0 10px}
+
+#postpage a:hover	{background: #f7e29e}
+
+#postpage span	{padding: 5px 10px;
+	color: #888888;
+	background: #dddddd}
+
+#postpage a span	{padding: 0;
+	color: black;
+	background: none}
+
+.attachment div#content{
+	width:100%;
+	float: none;
+}
+.attachment p.photo{
+	text-align: center;
 }

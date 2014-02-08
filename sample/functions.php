@@ -33,4 +33,11 @@ function myScript(){
 //エディタ・スタイルシート
 add_editor_style( );
 
+//ギャラリーのスタイルシートを出力しないようにする
+add_filter('use_default_gallery_style' ,'__return_false' );
+
+//アイキャッチ画像の追加
+add_theme_support('post-thumbnails' );
+set_post_thumbnail_size(550, 400, true);
+
 ?>

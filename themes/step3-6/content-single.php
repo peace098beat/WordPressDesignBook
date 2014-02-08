@@ -18,6 +18,9 @@
 <?php endif; ?>
 
 <?php the_content(); ?>
+<!-- 記事の複数ページへの分割 -->
+<?php 	wp_link_pages('before = <p id='postpage' > &after=</p> &pagelink=<span>%</span>'); ?>
+<?php 	wp_link_pages( ); ?>
 
 <p class="postinfo">
 <?php echo get_the_date(); ?>

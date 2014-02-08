@@ -6,7 +6,7 @@
 
 	<!-- カスタムテンプレートのcontent.phpを呼び出すループ -->
 	<?php if(have_posts()): while(have_posts()): the_post();?>
-		<?php get_template_part('content'); ?>
+		<?php get_template_part('content', 'single'); ?>
 
 	<p class="pagenation">
 		<span class="oldpage"><?php previous_post_link(); ?></span>

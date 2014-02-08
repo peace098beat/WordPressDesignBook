@@ -286,3 +286,53 @@ div.related ol	{font-size: 0.75em}
 .attachment p.photo{
 	text-align: center;
 }
+
+/* タイトルの一覧 */
+ul.post	{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-top: dotted 1px #aaaaaa;
+}
+ul.post li{
+	border-bottom: dotted 1px #aaaaaa;
+	background-image: url(chip.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 15px 0 15px 20px;
+}
+ul.post li a{
+	color: #000000;
+}
+ul.post li span{
+	font-size: smaller;
+	color: #888888;
+}
+
+.debug-template{
+	text-align: left;
+	font-size: smaller;
+	/*Debug*/ background-color: #01faf2;
+}
+
+/* 続きを読む */
+div.post p.more	{
+	margin: 0;
+	font-size: 0.625em;
+}
+
+div.post p.more a{
+	border: solid 1px #aaaaaa;
+	color: #333333;
+	padding: 3px;
+	/*border-radius: 5px;*/
+}
+
+div.post p.more a:hover{
+	background: #f7e29e;
+}
+
+/* 続きを読む（概要末尾） */
+div.post a.more{
+	font-size: smaller;
+}

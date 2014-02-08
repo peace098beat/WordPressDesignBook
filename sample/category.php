@@ -5,9 +5,9 @@
 <div id="content">
 <p class="title"><?php single_cat_title( ); ?></p>
 
-	<!-- カスタムテンプレートのcontent.phpを呼び出すループ -->
+	<p>category.phpにて。カスタムテンプレートのcontent-excerpt.phpを呼び出すループ。	</p>
 	<?php if(have_posts()): while(have_posts()): the_post();?>
-		<?php get_template_part('content'); ?>
+		<?php get_template_part('content', 'excerpt'); ?>
 	<?php endwhile; endif; ?>
 	
 	<!-- ページナビげージョン -->

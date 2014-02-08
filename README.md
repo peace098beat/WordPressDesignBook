@@ -109,19 +109,97 @@ header.phpにて、個別記事の場合はヘッダー画像を読み込まな�
 18:55 - 
 
 ## 3-8 画像の個別ページのデザインをカスタマイズする
+- 19:17
 
 #メディアを追加できない
-## wp-config.phpに以下を記述
+## 症状と対策
+###症状
+WordPress 3.8.1にて、記事投稿じの「メディアの追加」ができない。
+具体的には、記事投稿をクリックしてもうんともすんとも言わない。
+以前はできていたのだが、気づいたらできなくなっていた。
+### wp-config.phpに以下を記述
 define(‘CONCATENATE_SCRIPTS’, false );
 失敗。状況変わらず。メディアの追加を選択しても何も起きない。
-
-## 新しいWordPressをインストール(3rd-wp)
+### 新しいWordPressをインストール(3rd-wp)
 メディアの追加可能。
 Version: WordPress 3.8 
-## 3rd-wpを3.8.1に更新
+### 3rd-wpを3.8.1に更新
 問題なし。
-## sampleテーマを入れてみよう。
+### sampleテーマを入れてみよう。
 できるよーどうしよー。
 このままいこうか。
+### 3rd-wpをjetpack.2.8に更新  
+問題なし。
+## まとめ
+開発中は勉強もかねて、問題が起こったらとりあえず再インストールしまくろう。
 
-## 3rd-wpをjetpack.2.8に更新
+# STEP4 記事のタイトルのみをリストアップする
+## 4-1 記事のタイトルのみをリストアップする
+- date.php  
+	 - 概要  
+		 - 月別ページ  
+	 - 関数    
+		 - get_header()
+		 - single_month_title()
+		 - have_posts()
+		 - the_post()
+		 - get_template_part('content', 'title')
+		 - get_template_part('pagenation')
+		 - get_sidebar()
+		 - content-title.php()
+
+ - content-title.php
+	 - 概要
+		 - 記事のタイトル一覧を表示
+	 - 関数
+		 - the_permalink
+		 - the_title
+		 - get_the_date
+
+
+## 4-2 記事のタイトルと概要をリストアップする
+カテゴリーページのこと。カテゴリーページはcontent.phpで表示しているので、トップページと同様に本文が表示される。そのためカスタムテンプレートcontent-excerpt.phpを作成しカスタマイズする。 
+
+ - content-excerpt.php
+ 	 - 概要
+ 	 	 - 本文を表示せずリストするために、記事タイトルと概要を表示するカスタムテンプレート。
+ 	 - 関数
+ 	 	 - the_excerpt()
+
+ 	 	 	記事の概要(抜粋) の表示
+
+ - function.php
+	 - 概要
+	 	 - ユーザ関数
+ 	 - 関数
+ 	 	 - function my_excerpt_more($more){}
+ 	 	 	
+ 	 	 	概要の省略記号を返す
+
+		 - function my_more_link($excerpt) {}
+
+		 	概要の末尾に「続きを読む」リンクを追加
+
+ 	 	 - function my_excerpt_mblength($length) {}
+
+ 	 	 	粋の文字数の指定
+
+ - WP Multibyte Patchプラグイン
+ 	 - 概要
+ 	 	 - 抜粋を入力していない場合、本文の一部を抽出してくれるが、日本語だとうまく表示されないので、WP Multibyte Patchプラグインを有効にする。日本語版WordPressには標準装備。    
+		
+- 22:06
+
+## 4-3 記事ごとにサムネイル画像を表示する
+
+## 4-4 表示する記事の数をテンプレート内で指定する
+
+## 4-5 古い記事から順に表示する
+
+## 4-6 最新の二件の記事のみサムネイル画像と概要を表示
+
+## 4-7 おすすめ記事を表示する
+
+## 4-8 特定の投稿フォーマットの記事を表示する
+
+

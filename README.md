@@ -59,5 +59,6 @@ README.md
  - 投稿日時の表示  
 	<?php get_the_date(); ?>
 
-
+## STEP 1-8 記事の表示
+14:16 - 15:11
 

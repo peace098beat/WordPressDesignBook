@@ -34,7 +34,30 @@ README.md
 	function admin_header_style(){}
  - if構文  
 	if(): <- コロン':'とセミコロン';'を間違えないように。  
-	endif;
-  - <?php  header_image();  ?>  
+	endif;  
+ - <?php  header_image();  ?>  
 	カスタムヘッダーの画像
-	
+
+### STEP 1-8 記事の表示
+ - <?php the_permalink(); ?>  
+	パーマリンク
+ - <?php the_title(); ?>  
+	記事タイトル
+ - ループ  
+	<?php  if(have_posts()): while (have_posts()): the_post(); ?>  
+		<?php get_template_part('content' ); ?>  
+		カスタムテンプレートであるcontent.phpを呼び出す  
+	<?php endwhile; endif; ?>  
+ - 記事個別ページのURL  
+	<?php the_permalink(); ?>
+ - 記事タイトル  
+ 	<?php the_title(); ?>
+ - カテゴリーの表示  
+	<?php hte_category(''); ?>
+ - コンテンツ本文の表示  
+	<?php the_content( ); ?>
+ - 投稿日時の表示  
+	<?php get_the_date(); ?>
+
+
+

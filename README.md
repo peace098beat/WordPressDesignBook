@@ -265,6 +265,49 @@ Version: WordPress 3.8
 			); ?>  
 
 ## 4-8 特定の投稿フォーマットの記事を表示する 15:10 - 
+ - 投稿フォーマット
+ 	 - 概要
+ 	 	 - 記事の種類を指定する機能。指定できる投稿フォーマットは以下になっている。ガイドラインに従って試用することが求められているため、独自フォーマットなどは追加できません。
+ 	 - 投稿フォーマット
+ 	 	 - aside
 
+ 	 		短い記事(twitter)。タイトルを省略して表示。
 
+ 	 	 - gallery
 
+			ギャラリーを表示した記事。
+
+ 	 	 - link
+
+ 	 	 	リンクが主体の記事。
+
+ 	 	 - image
+
+			一枚の画像が主体の記事。
+
+ 	 	 - quote 
+
+ 	 	 	引用が主体の記事。
+
+ 	 	 - status
+			
+			短い記事(facebook)。タイトルを省略して表示。
+
+ 	 	 - video
+
+			ビデオが主体の記事
+
+ 	 	 - audio
+
+			オーディオが主体の記事
+
+ 	 	 - chat
+
+ 	 	 	チャットの記録をまとめた記事
+
+ - function.php
+	 - 関数
+ 		 - add_theme_support('post-formats' , array('status'))
+ 		 - add_theme_support('post-formats' , array('status', 'video'))
+
+ 		 	投稿フォーマットの機能を有効にする。

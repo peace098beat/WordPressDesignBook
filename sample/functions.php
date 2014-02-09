@@ -61,6 +61,9 @@ add_filter('excerpt_mblength' ,'my_excerpt_mblength' );
 //カテゴリーページのサムネイル画像のサイズ指定用関数
 add_image_size('mysize400', 100, 100 );
 
+//投稿フォーマット
+add_theme_support('post-formats' , array('aside','gallery' ,'link','image','quote','status','video','audio','chat'));
+
 
 
 ?>

@@ -30,6 +30,7 @@
 		<?php 	 if($image): ?>
 			<?php echo wp_get_attachment_image($image->ID, 'thumbnail'); ?>
 		<?php 	else: ?>
+			<!-- 代替えの画像の指定-->
 			<img src="<?php bloginfo('template_url'); ?>/no_image.jpg" alt="No Image" width="150" height="150" />
 		<?php endif; ?>
 		

@@ -353,3 +353,20 @@ div#pickup div.post{
 	padding: 15px;
 }
 
+/* ステータス */
+div#sidebar li#status h2{
+	background-color: #333333;
+	border-radius: 0;
+}
+
+div#sidebar li#status ul	{
+	border: solid 1px #aaaaaa;
+}
+
+div#sidebar li#status li	{
+	padding: 5px 10px;
+}
+
+div#sidebar li#status span{
+	color: #888888;
+}

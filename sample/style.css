@@ -344,3 +344,12 @@ div.post p.thumb{
 }
 
 
+
+
+/* おすすめ記事 */
+div#pickup div.post{
+	border: dotted 2px #f3b62f;
+	background-color: #ffeedd;
+	padding: 15px;
+}
+

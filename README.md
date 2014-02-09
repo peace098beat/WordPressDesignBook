@@ -193,6 +193,7 @@ Version: WordPress 3.8
 ## 4-3 記事ごとにサムネイル画像を表示する 22:08 - 23:00
  - content-excerpt.php  
 	 - 概要
+	 	 - カテゴリーページにて、抜粋文章の横に表示するサムネイル画像の表示。基本的にアイキャッチ画像だが、代替画像、本文画像の表示も可能。
 	 - 関数
 		 - has_post_thumbnail
 
@@ -207,14 +208,63 @@ Version: WordPress 3.8
 			テンプレートファイルのパスを取得
 
 
-## 4-4 表示する記事の数をテンプレート内で指定する
+## 4-4 表示する記事の数をテンプレート内で指定する 23:00 - 23:23
+ - category.php
+	 - 関数
+	 	- <?php query_posts('posts_per_page=3' ); ?>
 
-## 4-5 古い記事から順に表示する
+	 		ループにて表示する記事数の設定。(
+	 		-1ですべて表示）ループの前に記述。
+	 		WordPressのGUI設定内で、1ページに表示する最大投稿数の設定が設定ループ数よりも大きいと404エラーになるので注意。
+	 		その他query_postsのパラメータP141参照
 
-## 4-6 最新の二件の記事のみサムネイル画像と概要を表示
 
-## 4-7 おすすめ記事を表示する
+## 4-5 古い記事から順に表示する 23:25 - 
+ - category.php
+	 - 関数
+		 - &order=ASC
+			<?php query_posts('posts_per_page=-1&order=ASC&' . $query_string ); ?>  
+			古い記事から表示するパラメータ。
 
-## 4-8 特定の投稿フォーマットの記事を表示する
+## 4-6 最新の二件の記事のみサムネイル画像と概要を表示 14:05 - 14:37
+ - home.php
+ 	 - 関数
+ 	 	 - query_posts('posts_per_page=2'); 
+
+ 	 	 	2件のみサムネイルと概要を表示。WordPressが投稿を表示するのに使用しているメインクエリーを置き換える手段。
+ 	 	
+ 	 	 - query_posts('posts_per_page=8&offset=2'); 
+
+			
+			始めの2件を飛ばして(offset=2)、8件表示
+
+	 - 関数
+	 	 - get_template_part('content','excerpt');
+
+			サムネイルと概要を表示するカスタムテンプレートcontent-excerpt.pnpを呼び出す。
+
+		 - get_template_part('content','title');
+
+		 	記事のタイトルのみ表示するカスタムテンプレートcontent-title.pnpを呼び出す。
+
+## 4-7 おすすめ記事を表示する 14:40 - 15:07
+ - home.php
+ 	 - 関数
+ 	 	 - &ignore_sticky_posts=1
+
+ 	 	 	おすすめ記事を表示するかしないかの指定。表示:0。非表示:1。
+
+		 - お勧め記事の指定
+			
+			投稿>投稿一覧にて、公開状態：一般公開>編集>この投稿を先頭に固定表示。でお勧め記事となる。
+
+		 - $myquery_pickup = array(  
+			'posts_per_page' => 1,  //ループ回数。お勧めの表示数
+			'ignore_sticky_posts' => 1,  //お勧めの表示・非表示
+			'post__in' => get_option('sticky_posts')  
+			); ?>  
+
+## 4-8 特定の投稿フォーマットの記事を表示する 15:10 - 
+
 
 

@@ -61,16 +61,27 @@
 ### カテゴリー別に表示できる？？
 固定ページに特定カテゴリに投稿した記事を載せれるか調査。
 
-[WordPressの固定ページに特定カテゴリの記事一覧を書き出す - サツぽろ、ニッキ。](http://1day.sorezore.net/2011/11/24/13732/)
+ - [WordPressの固定ページに特定カテゴリの記事一覧を書き出す - サツぽろ、ニッキ。](http://1day.sorezore.net/2011/11/24/13732/)
 
-[【WordPress】固定ページに特定のカテゴリーのみを表示する方法 - Crazy One](http://gladdesign.net/2011/12/03/wordpress-page-category-specification/)
+ - [【WordPress】固定ページに特定のカテゴリーのみを表示する方法 - Crazy One](http://gladdesign.net/2011/12/03/wordpress-page-category-specification/)
 
 
 なにやら調べていると固定ページではphpが実行できない??
 プラグインの導入が必要と書いているが。。プラグイン名はWP exec PHP。
-[WordPressの固定ページで特定のカテゴリの新着一覧を表示する - CrossBridge](http://www.crossbridge.biz/show-list-at-fixed-page)
+   
+ - [WordPressの固定ページで特定のカテゴリの新着一覧を表示する - CrossBridge](http://www.crossbridge.biz/show-list-at-fixed-page)
 
 
 # その他Tips
 <!-- テンプレートファイルの表示 -->
 <p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p>
+
+- page.php内では動かない??
+	<!-- カスタムテンプレートのcontent.phpを呼び出すループ -->
+	<?php the_content(); ?>
+	<?php if(have_posts()): while(have_posts()): the_post();?>
+		<div class="post">
+			<h2><?php the_title(); ?></h2>
+			<?php the_content( ); ?>
+		</div>
+	<?php endwhile; endif; ?>

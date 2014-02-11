@@ -15,7 +15,6 @@
 		</div>
 	<?php endwhile; endif; ?>
 		
-	<h1>Gallery</h1>
 	<div id="thumbnail">
 	<ul>
 		<li><a href="http://hikaru-sakihama.fififactory.com/common/img/gallery/Hikaru-A001.jpg" data-lightbox="roadtrip"><img alt="" src="http://hikaru-sakihama.fififactory.com/common/img/gallery/S-Hikaru-A001.jpg" width="70px" /></a></li>

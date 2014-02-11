@@ -7,16 +7,30 @@
 <!-- コンテンツ -->
 <div id="content">
 
-	<!-- カスタムテンプレートのcontent.phpを呼び出すループ -->
-	<?php if(have_posts()): while(have_posts()): the_post();?>
-		<div class="post">
-			<h2><?php the_title(); ?></h2>
-			<?php the_content( ); ?>
-		</div>
-	<?php endwhile; endif; ?>
-	
-	 -- Design Image --
-	<a href="http://fififactory.com/3rd-wp/wp/wp-content/uploads/2014/02/Blog-Hikaru-Sakihama.png"><img class="alignnone size-medium wp-image-192" alt="Blog   Hikaru Sakihama" src="http://fififactory.com/3rd-wp/wp/wp-content/uploads/2014/02/Blog-Hikaru-Sakihama-108x300.png" width="108" height="300" /></a>
+	<div class="post">
+	<?php the_title('<h2>' ,'</h2>'); ?>
+
+	<!-- 特定カテゴリのみ表示 -->
+	<?php
+	    $posts = get_posts('numberposts=-1&category_name=art');
+	    global $post;
+	    if($posts): foreach($posts as $post): setup_postdata($post);?>
+
+	    	<!-- ループの中身はcontent.phpと同じ内容 -->
+
+		<!-- 記事のURLと記事タイトルの表示 -->
+		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<!-- カテゴリの表示 -->
+		<p class="postcat"><?php the_category(' '); ?></p>
+		<!-- アイキャッチ画像 -->
+		<?php the_post_thumbnail( ); ?>
+		<!-- 記事本文の表示 -->
+		<?php the_content( ); ?>	
+		<!-- ポストした日時の表示  -->
+		<p class="postinfo"><?php echo get_the_date( ); ?></p>
+
+	<?php endforeach; endif; ?>
+	</div>
 
 </div>
 

@@ -15,6 +15,8 @@
 		</div>
 	<?php endwhile; endif; ?>
 	
+	 -- Design Image --
+	<a href="http://fififactory.com/3rd-wp/wp/wp-content/uploads/2014/02/Blog-Hikaru-Sakihama.png"><img class="alignnone size-medium wp-image-192" alt="Blog   Hikaru Sakihama" src="http://fififactory.com/3rd-wp/wp/wp-content/uploads/2014/02/Blog-Hikaru-Sakihama-108x300.png" width="108" height="300" /></a>
 
 </div>
 

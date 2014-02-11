@@ -41,9 +41,12 @@
  	- Top
  		 - page-top.php
  		 	 - 背景画像の設定
+ 		 	 - 参考サイトMusicSceneではbody要素をabsoluteの基準としていた。しかし、page-top.phpだと、#content要素が親要素となるため、背景の絶対位置指定ができない。
+ 		 	 （一度保留）
  	- Profile
  		 - page-profile.php
- 		 	 - GUIから記入もできる？
+ 		 	 - 文章の挿入
+
  	- Gallery
  		 - page-gallery.php
  		 	 - 画像の配置
@@ -55,5 +58,19 @@
  		 	 - `カテゴリー別に表示できる？？`
 
 
+### カテゴリー別に表示できる？？
+固定ページに特定カテゴリに投稿した記事を載せれるか調査。
+
+[WordPressの固定ページに特定カテゴリの記事一覧を書き出す - サツぽろ、ニッキ。](http://1day.sorezore.net/2011/11/24/13732/)
+
+[【WordPress】固定ページに特定のカテゴリーのみを表示する方法 - Crazy One](http://gladdesign.net/2011/12/03/wordpress-page-category-specification/)
 
 
+なにやら調べていると固定ページではphpが実行できない??
+プラグインの導入が必要と書いているが。。プラグイン名はWP exec PHP。
+[WordPressの固定ページで特定のカテゴリの新着一覧を表示する - CrossBridge](http://www.crossbridge.biz/show-list-at-fixed-page)
+
+
+# その他Tips
+<!-- テンプレートファイルの表示 -->
+<p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p>

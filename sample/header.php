@@ -21,21 +21,21 @@
 					alt="RSS FEED" 
 					width="28" 
 					height="28" /></a>
-		</div>
+		</div><!-- subinfo -->
 
 		<div id="nav">
 			<?php wp_nav_menu(array(
 			'theme_location' => 'navigation'
 			)); ?>
-		</div>
+		</div><!-- nav -->
 	
-	<!-- シングルページ、個別ページの場合はヘッダー画像を表示しない -->
-	<?php 	if(!is_single()) : ?>
-		<?php if(get_header_image()): ?>
-		<div id="image">
-		<img src="<?php header_image() ?>" alt="*" width="<?php echo HEADER_IMAGE_WIDTH; ?> " height="<?php echo HEADER_IMAGE_HEIGHT; ?>" />
-		</div>
-		<?php endif; ?>
-	<?php 	endif; ?>
+		<!-- シングルページ、個別ページの場合はヘッダー画像を表示しない -->
+		<?php 	if(!is_single()) : ?>
+			<?php if(get_header_image()): ?>
+			<div id="image">
+			<img src="<?php header_image() ?>" alt="*" width="<?php echo HEADER_IMAGE_WIDTH; ?> " height="<?php echo HEADER_IMAGE_HEIGHT; ?>" />
+			</div>
+			<?php endif; ?>
+		<?php 	endif; ?>
 
-</div> <!-- ヘッダ -->
+	</div> <!-- ヘッダ -->

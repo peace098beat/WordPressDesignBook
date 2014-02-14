@@ -8,6 +8,11 @@ Description: This is my sample theme.
 body{
 	font-family: 'メイリオ', 'Hiragino kaku Gothic Pro', sans-serif;
 	background-color: #fff;
+	
+	/*musicscene*/	
+	/*background-color: #000;*/
+	margin: 0;
+
 }
 a{
 	text-decoration:none;
@@ -19,59 +24,135 @@ a img{
 
 /*コンテナ*/
 div#container{
-	width: 900px;
-	margin: auto; 
+	/*width: 900px;*/
+	height: 100%;
+	/*margin: auto; */
+
+	/*musicscene*/
+	/*background-color: #000;*/
 }
 
 /*ヘッダー*/
 div#header{
+	/*wordpress*/
 	font-family: 'Trebuchet MS', sans-serif;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
+
+	/*musicscene*/
+	/*-moz-opacity:0.7;*/
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	*background-color: rgb(0, 0, 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=70); 
+	background-color: rgba(0, 0, 0, 0.7) ;
+
+	border-bottom:1px #fff solid;
+	/*padding:12px 20px 12px 20px;*/
+	/*height:18px;*/
+	min-height:18px;
+	height: auto !important;
+	height:18px;
 }
 div#header h1{
-	font-size: 2.5em;
-	margin: 0;
+	/*wordpress*/
+	/*font-size: 2.5em;*/
+	/*margin: 0;*/
+
+	/*musicscene*/
+	width:400px;
+	position:relative;
+	font-weight:bold;
+	/*font-family:"���C���I", Meiryo, Osaka, "�l�r �o�S�V�b�N", "MS PGothic", sans-serif,"�q���M�m�p�S Pro W3", "Hiragino Kaku Gothic Pro"�G*/
 }
 div#header h1 a{
-	color: #000000;
+	/*wordpress*/
+	/*color: #000000;*/
+
+	/*musicscene*/
+	color:#fff;
+	font-size:18px;
+	font-weight:bold;
+	text-decoration:none;
+	line-height:130%;
 }
 div#header p#desc{
-	font-size: 1em;
+	/*wordpress*/
+/*	font-size: 1em;
 	font-weight: bold;
 	color: #999999;
-	margin:  0 0 5px;
+	margin:  0 0 5px;*/
+
+	/*musicscene*/
+	/**/
 }
 div#subinfo{
-	text-align: right;
-	margin: -32px 0 5px;
+	/*wordpress*/
+/*	text-align: right;
+	margin: -32px 0 5px;*/
+
+	/*musicscene*/
+	/**/
 } 
 
 /*ナビゲーションバー*/
 div#nav{
-	font-size: 0.75em;
+	/*wordpress*/
+/*	font-size: 0.75em;
 	height: 30px;
 	background-color: #ffffff;
 	border: solid 1px #aaaaaa;
-	margin-bottom: 8px;
+	margin-bottom: 8px;*/
+
+	/*musicscene*/
+	position:absolute;
+	/*position: relative;*/
+	right:0px;
+	top:-16px;
+	top: 32px;
+
+	/*background-color: #123;*/
 }
 div#nav ul{
-	margin: 0;
-	padding: 0;
+	/*wordpress*/
+/*	margin: 0;
+	padding: 0;*/
+
+	/*musicscene*/
+	display:inline;
+	list-style:none;
 }
 div#nav li{
-	list-style-type: none;
-	float: left;
+	/*wordpress*/
+/*	list-style-type: none;
+	float: left;*/
+
+	/*musicscene*/
+	display:inline;
+	list-style:none;
 }
 div#nav li a{
-	display: block;
+	/*wordpress*/
+/*	display: block;
 	width: 150px;
 	line-height: 30px;
 	border-right: #aaa 1px solid;
 	color: #000;
-	text-align: center;
+	text-align: center;*/
+
+	/*musicscene*/
+	color:#fff;
+	padding-right:2em;
+	font-family:Arial, Helvetica, sans-serif;
+	letter-spacing:2px;
+	text-decoration:none;
 }
 div#nav li a:hover{
-	background-color: #c4f254;
+	/*wordpress*/
+	/*background-color: #c4f254;*/
+
+	/*musicscene*/
+	text-decoration:underline;
+
 }
 
 /*コンテンツ*/
@@ -206,15 +287,22 @@ div#sidebar li li a:hover{
 
 /*フッター*/
 div#footer{
+	/*wordpress*/
 	border-top: solid 1px #aaaaaa;
 	padding: 6px 0;
 	clear: both;
+
+	/*musicscene*/
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
 }
 div#footer p{
 	font-size: 0.75em;
 	font-style: normal;
 	font-family: Verdana, sans-serif;
 	margin: 0;
+	color: #fff;
 }
 
 /* ギャラリー */

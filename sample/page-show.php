@@ -1,6 +1,5 @@
 <!-- テンプレートファイルの表示 -->
-<p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p>
-
+ <p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p> 
 <!-- ヘッダー -->
 <?php get_header(); ?>
 

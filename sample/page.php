@@ -1,5 +1,5 @@
 <!-- テンプレートファイルの表示 -->
-<p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p>
+<!-- <p class="debug-template">テンプレートファイル名<?php global $template; echo $template; ?></p> -->
 
 <!-- ヘッダー -->
 <?php get_header(); ?>
@@ -19,7 +19,7 @@
 </div>
 
 <!-- サイドバー -->
-<?php get_sidebar( ); ?>
+<!-- <?php get_sidebar( ); ?> -->
 
 <!-- フッター -->
 <?php get_footer(); ?>

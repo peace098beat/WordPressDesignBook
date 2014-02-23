@@ -87,3 +87,8 @@
 	<?php endwhile; endif; ?>
 
 
+# hikaru-sakihama.fiffactory.comのCSSレイアウトを、WordPressに適応させる
+20140221
+使用するワードプレスは[fififactory.com/3rd-wp/](http://fififactory.com/3rd-wp/wp/)
+テーマが決まれば、のちにhikaru-sakihamaドメインに新規で作成する。
+
